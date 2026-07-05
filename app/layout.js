@@ -8,8 +8,11 @@ import FloatingPhone from '@/components/FloatingPhone';
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata = {
-  title: 'La Brigade Mobile | Réparation de Téléphones, Tablettes & Mac',
-  description: "Besoin d'une réparation express ? La Brigade Mobile répare votre téléphone, tablette ou Mac (écran, batterie, connecteur). Pièces premium, garanti 3 mois, devis gratuit. iPhone, Samsung, iPad et plus.",
+  title: {
+    default: 'La Brigade Mobile | Réparation de Téléphones à Toulouse',
+    template: '%s | La Brigade Mobile'
+  },
+  description: "Réparation express de téléphones à Toulouse et à domicile. iPhone, Samsung, Xiaomi... Écran, batterie. Pièces Premium garanties 1 an. Devis gratuit !",
   icons: {
     icon: '/logo.png',
     shortcut: '/logo.png',
@@ -20,8 +23,8 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: 'La Brigade Mobile | Réparation Express',
-    description: 'Réparation de smartphones, tablettes et ordinateurs. Pièces premium, garanti 3 mois, devis gratuit.',
+    title: 'La Brigade Mobile | Réparation de Téléphones à Toulouse',
+    description: 'Réparation express de smartphones à Toulouse et à domicile. Intervention en 30 min, pièces premium garanties 1 an. Contactez-nous !',
     url: 'https://labrigademobile.fr',
     siteName: 'La Brigade Mobile',
     images: [

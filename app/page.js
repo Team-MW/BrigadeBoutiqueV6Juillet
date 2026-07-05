@@ -1,3 +1,7 @@
+export const metadata = {
+  description: 'Réparation express de smartphones à Toulouse et à domicile. iPhone, Samsung, Xiaomi. Écran, batterie... Pièces Premium garanties 1 an. Devis gratuit !',
+};
+
 import Image from "next/image";
 import { Wrench, Battery, Droplet, MonitorSmartphone, ShieldCheck, Zap, ThumbsUp, EyeOff } from "lucide-react";
 import WaveDivider from "@/components/WaveDivider";

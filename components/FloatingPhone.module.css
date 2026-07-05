@@ -75,10 +75,11 @@
   border-color: transparent transparent transparent #1e293b;
 }
 
-.floatingBtn:hover .tooltip {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(0);
+.floatingBtn:hover .tooltip,
+.tooltipVisible {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateX(0) !important;
 }
 
 @keyframes pulse {
@@ -103,6 +104,8 @@
     height: 60px;
   }
   .tooltip {
-    display: none;
+    right: 75px;
+    font-size: 0.95rem;
+    padding: 8px 12px;
   }
 }

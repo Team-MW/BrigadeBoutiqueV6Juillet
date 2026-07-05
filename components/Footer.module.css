@@ -147,13 +147,44 @@
 }
 
 @media (max-width: 768px) {
+  .footer {
+    padding-top: 2.5rem;
+  }
+  .container {
+    gap: 2.5rem;
+    text-align: center;
+  }
+  .column {
+    align-items: center;
+  }
+  .list {
+    align-items: center;
+  }
+  .listItem {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .icon {
+    margin-bottom: 0.2rem;
+  }
+  .logoScaleUp {
+    transform: scale(1.4);
+  }
+  .logoScaleUp:hover {
+    transform: scale(1.5);
+  }
+  .relaisSection {
+    padding: 2rem 0;
+  }
   .relaisContainer {
     flex-direction: column;
     text-align: center;
+    gap: 1.5rem;
   }
   .relaisLogos {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 }

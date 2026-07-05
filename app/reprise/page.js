@@ -1,3 +1,8 @@
+export const metadata = {
+  title: 'Rachat & Reprise de Téléphones à Toulouse',
+  description: 'Revendez votre ancien smartphone au meilleur prix chez La Brigade Mobile. Estimation gratuite, tous états acceptés (écran cassé). Paiement cash immédiat !',
+};
+
 import { Recycle, DollarSign, Smartphone } from 'lucide-react';
 import FAQ from '@/components/FAQ';
 import styles from './page.module.css';

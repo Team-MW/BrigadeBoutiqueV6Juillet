@@ -1,3 +1,8 @@
+export const metadata = {
+  title: 'Réparation de Téléphone à Domicile',
+  description: 'Pas le temps de vous déplacer ? On répare votre téléphone à domicile ou au bureau sur Toulouse. Rapide, fiable et garanti 1 an. Prenez rendez-vous !',
+};
+
 import { Car, Clock, MapPin, Wrench } from 'lucide-react';
 import FAQ from '@/components/FAQ';
 import styles from './page.module.css';
