@@ -271,8 +271,6 @@ export default function Home() {
         </div>
       </section>
 
-      <FAQ />
-
       {/* Notre Boutique Section */}
       <section className={styles.boutiqueSection}>
         <div className="container">
@@ -312,6 +310,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <FAQ />
     </div>
   );
 }

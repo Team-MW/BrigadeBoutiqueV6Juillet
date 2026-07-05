@@ -5,6 +5,7 @@ export const metadata = {
 
 import { Recycle, DollarSign, Smartphone } from 'lucide-react';
 import FAQ from '@/components/FAQ';
+import EstimationSimulator from '@/components/EstimationSimulator';
 import styles from './page.module.css';
 
 export default function Reprise() {
@@ -23,12 +24,14 @@ export default function Reprise() {
               La Brigade Mobile rachète vos anciens smartphones, tablettes et ordinateurs. 
               Qu'ils soient fonctionnels ou cassés, donnez-leur une seconde vie et repartez avec du cash !
             </p>
-            <a href="#estimer" className="btn-primary">Estimer mon appareil</a>
+            <div className={styles.badges}>
+              <span className={styles.badge}><DollarSign size={16} /> Paiement Cash Immédiat</span>
+              <span className={styles.badge}><Recycle size={16} /> Écologique & Responsable</span>
+            </div>
           </div>
           
-          <div className={styles.blobDecoration}>
-            <Recycle size={80} color="#fff" />
-            <h2>Écologique & Rentable</h2>
+          <div className={styles.simulatorSide}>
+            <EstimationSimulator />
           </div>
         </div>
       </section>
@@ -79,7 +82,7 @@ export default function Reprise() {
               <iframe 
                 id="JotFormIFrame-261856530901356" 
                 title="Formulaire Devis Réparation" 
-                allowTransparency="true" 
+                allowtransparency="true" 
                 allowFullScreen="true" 
                 allow="geolocation; microphone; camera" 
                 src="https://form.jotform.com/261856530901356" 

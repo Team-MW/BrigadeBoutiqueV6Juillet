@@ -79,7 +79,7 @@ export default function Domicile() {
               <iframe 
                 id="JotFormIFrame-261856530901356" 
                 title="Formulaire Devis Réparation" 
-                allowTransparency="true" 
+                allowtransparency="true" 
                 allowFullScreen="true" 
                 allow="geolocation; microphone; camera" 
                 src="https://form.jotform.com/261856530901356" 
