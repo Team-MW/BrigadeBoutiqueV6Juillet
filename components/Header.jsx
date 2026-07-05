@@ -13,7 +13,16 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={`container ${styles.container}`}>
-        <Link href="/" className={styles.logo} onClick={() => setIsMenuOpen(false)}>
+        <Link 
+          href="/" 
+          className={styles.logo} 
+          onClick={(e) => {
+            setIsMenuOpen(false);
+            if (window.location.pathname === '/') {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          }}
+        >
           <Image 
             src="/logo.png" 
             alt="La Brigade Mobile Logo" 
@@ -26,6 +35,17 @@ export default function Header() {
         
         {/* Navigation Bureau */}
         <nav className={`${styles.nav} ${styles.desktopNav}`}>
+          <Link 
+            href="/" 
+            className={styles.navLink}
+            onClick={(e) => {
+              if (window.location.pathname === '/') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }}
+          >
+            Accueil
+          </Link>
           <Link href="/reparations" className={styles.navLink}>Réparations</Link>
           <Link href="/reprise" className={styles.navLink}>Reprise</Link>
           <Link href="/domicile" className={styles.navLink}>À Domicile</Link>
@@ -42,6 +62,18 @@ export default function Header() {
       {isMenuOpen && (
         <div className={styles.mobileMenu}>
           <nav className={styles.mobileNav}>
+            <Link 
+              href="/" 
+              className={styles.mobileNavLink} 
+              onClick={(e) => {
+                toggleMenu();
+                if (window.location.pathname === '/') {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+              }}
+            >
+              Accueil
+            </Link>
             <Link href="/reparations" className={styles.mobileNavLink} onClick={toggleMenu}>Réparations</Link>
             <Link href="/reprise" className={styles.mobileNavLink} onClick={toggleMenu}>Reprise</Link>
             <Link href="/domicile" className={styles.mobileNavLink} onClick={toggleMenu}>À Domicile</Link>

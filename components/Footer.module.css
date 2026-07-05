@@ -90,3 +90,70 @@
   padding: 0.8rem 1.5rem;
   font-size: 1.05rem;
 }
+
+/* Point Relais Section */
+.relaisSection {
+  border-top: 1px solid var(--border);
+  padding: 2.5rem 0;
+  margin-top: 2rem;
+  background-color: white;
+}
+
+.relaisContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.relaisText {
+  flex: 1;
+}
+
+.relaisTitle {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+.relaisText p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.relaisLogos {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.relaisLogo {
+  object-fit: contain;
+  transition: all var(--transition-fast);
+}
+
+.relaisLogo:hover {
+  transform: scale(1.05);
+}
+
+.logoScaleUp {
+  transform: scale(1.7);
+}
+
+.logoScaleUp:hover {
+  transform: scale(1.8);
+}
+
+@media (max-width: 768px) {
+  .relaisContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .relaisLogos {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}

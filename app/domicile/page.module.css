@@ -55,7 +55,7 @@
 }
 
 .text-gradient {
-  color: #f59e0b; /* Orange/Ambre */
+  color: #FBBC04; /* Jaune Logo */
 }
 
 .subtitle {
@@ -68,7 +68,7 @@
 .carBubble {
   width: 400px;
   height: 400px;
-  background: #f59e0b; 
+  background: #FBBC04; 
   color: #fff;
   border-radius: 60% 40% 50% 50% / 40% 50% 60% 40%;
   display: flex;
@@ -76,7 +76,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  box-shadow: 0 25px 50px rgba(245, 158, 11, 0.25);
+  box-shadow: 0 25px 50px rgba(251, 188, 4, 0.25);
   animation: floatOrange 6s ease-in-out infinite alternate;
 }
 
@@ -119,12 +119,12 @@
   right: -20px;
   font-size: 8rem;
   font-weight: 900;
-  color: rgba(245, 158, 11, 0.05);
+  color: rgba(251, 188, 4, 0.08);
   line-height: 1;
 }
 
 .icon {
-  color: #f59e0b;
+  color: #FBBC04;
   margin-bottom: 1.5rem;
 }
 
@@ -154,7 +154,7 @@
 .seoText h3 {
   font-size: 1.8rem;
   font-weight: 800;
-  color: #f59e0b;
+  color: #FBBC04;
   margin-bottom: 1.5rem;
   margin-top: 2rem;
 }
@@ -178,14 +178,14 @@
 }
 
 .contactBubble {
-  background: #f59e0b;
+  background: #FBBC04;
   color: #fff;
   width: 90vw;
   max-width: 900px;
   border-radius: 120px 80px 100px 60px / 60px 100px 80px 120px;
   padding: 5rem;
   text-align: center;
-  box-shadow: 0 20px 50px rgba(245, 158, 11, 0.3);
+  box-shadow: 0 20px 50px rgba(251, 188, 4, 0.3);
 }
 
 .contactBubble h2 {

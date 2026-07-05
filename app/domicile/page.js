@@ -1,4 +1,5 @@
 import { Car, Clock, MapPin, Wrench } from 'lucide-react';
+import FAQ from '@/components/FAQ';
 import styles from './page.module.css';
 
 export default function Domicile() {
@@ -69,17 +70,32 @@ export default function Domicile() {
          <div className={styles.contactBubble}>
             <h2>Réservez votre technicien</h2>
             <p>Indiquez-nous vos disponibilités et votre ville pour que nous puissions organiser le déplacement.</p>
-            <form className={styles.form}>
-               <div style={{display: 'flex', gap: '1rem', width: '100%'}}>
-                 <input type="text" placeholder="Nom" className={styles.input} />
-                 <input type="tel" placeholder="Téléphone" className={styles.input} />
-               </div>
-               <input type="text" placeholder="Adresse complète" className={styles.input} />
-               <input type="text" placeholder="Modèle et panne (ex: iPhone 13, écran cassé)" className={styles.input} />
-               <button type="button" className="btn-primary" style={{background: '#fff', color: '#f59e0b'}}>Demander un rendez-vous</button>
-            </form>
+            <div style={{ marginTop: '2rem', background: '#fff', borderRadius: '20px', overflow: 'hidden' }}>
+              <iframe 
+                id="JotFormIFrame-261856530901356" 
+                title="Formulaire Devis Réparation" 
+                allowTransparency="true" 
+                allowFullScreen="true" 
+                allow="geolocation; microphone; camera" 
+                src="https://form.jotform.com/261856530901356" 
+                frameBorder="0" 
+                style={{ minWidth: '100%', maxWidth: '100%', height: '600px', border: 'none', display: 'block' }} 
+                scrolling="yes"
+              ></iframe>
+            </div>
          </div>
       </section>
+
+      <FAQ 
+        title="FAQ - Réparation à Domicile"
+        subtitle="Les questions sur nos interventions sur site à Toulouse."
+        customFaqs={[
+          { question: "Où vous déplacez-vous exactement pour les réparations ?", answer: "Nos techniciens interviennent sur l'ensemble de l'agglomération toulousaine (Toulouse centre, Blagnac, Colomiers, Balma et communes limitrophes). Nous réparons votre smartphone à votre domicile, votre bureau ou même sur un lieu de rendez-vous extérieur." },
+          { question: "Y a-t-il des frais de déplacement cachés ?", answer: "Non, notre grille tarifaire est transparente. Si des frais de déplacement s'appliquent selon votre zone géographique (grande périphérie toulousaine), ils vous sont systématiquement annoncés et inclus dans le devis avant validation de l'intervention." },
+          { question: "La réparation à domicile est-elle aussi fiable qu'en boutique ?", answer: "Absolument. Nos véhicules d'intervention sont de véritables ateliers mobiles équipés des mêmes outils de précision. Le technicien effectue les réparations (remplacement d'écran iPhone, batterie) en moins de 30 minutes dans des conditions optimales." },
+          { question: "Comment payer une réparation effectuée à domicile ?", answer: "Le paiement s'effectue directement auprès du technicien à la toute fin de l'intervention, une fois que vous avez testé votre appareil. Nous acceptons les cartes bancaires via terminal de paiement et les espèces." }
+        ]}
+      />
 
     </div>
   );

@@ -2,8 +2,8 @@ import { ChevronDown } from 'lucide-react';
 import WaveDivider from '@/components/WaveDivider';
 import styles from './FAQ.module.css';
 
-export default function FAQ() {
-  const faqs = [
+export default function FAQ({ customFaqs, title = "Foire Aux Questions (FAQ)", subtitle = "Tout ce que vous devez savoir." }) {
+  const defaultFaqs = [
     {
       question: "Combien de temps prend une réparation d'écran d'iPhone ou de smartphone Android ?",
       answer: "La grande majorité de nos réparations (comme le remplacement d'un écran d'iPhone 13, 14, 15 ou d'une batterie Samsung Galaxy) sont effectuées en express en moins de 30 minutes. Nos techniciens certifiés ont les pièces en stock pour vous garantir une intervention immédiate et un appareil comme neuf."
@@ -30,10 +30,12 @@ export default function FAQ() {
     }
   ];
 
+  const displayFaqs = customFaqs || defaultFaqs;
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
+    "mainEntity": displayFaqs.map(faq => ({
       "@type": "Question",
       "name": faq.question,
       "acceptedAnswer": {
@@ -53,11 +55,11 @@ export default function FAQ() {
       />
       
       <div className={`container ${styles.container}`}>
-        <h2 className={styles.title}>Foire Aux Questions <span className="text-gradient">(FAQ)</span></h2>
-        <p className={styles.subtitle}>Tout ce que vous devez savoir sur nos services de réparation et de reprise.</p>
+        <h2 className={styles.title}>{title}</h2>
+        <p className={styles.subtitle}>{subtitle}</p>
         
         <div className={styles.faqList}>
-          {faqs.map((faq, idx) => (
+          {displayFaqs.map((faq, idx) => (
             <details key={idx} className={styles.details}>
               <summary className={styles.summary}>
                 <span className={styles.questionText}>{faq.question}</span>

@@ -1,4 +1,5 @@
 import { Recycle, DollarSign, Smartphone } from 'lucide-react';
+import FAQ from '@/components/FAQ';
 import styles from './page.module.css';
 
 export default function Reprise() {
@@ -69,25 +70,32 @@ export default function Reprise() {
          <div className={styles.contactBubble}>
             <h2>Demande d'estimation gratuite</h2>
             <p>Remplissez ce formulaire pour avoir une idée du prix de rachat. La valeur finale sera validée lors du contrôle technique de l'appareil en boutique.</p>
-            <form className={styles.form}>
-               <input type="text" placeholder="Marque (ex: Apple, Samsung...)" className={styles.input} />
-               <input type="text" placeholder="Modèle exact (ex: iPhone 13 Pro 128Go)" className={styles.input} />
-               <select className={styles.input}>
-                  <option>État de l'écran</option>
-                  <option>Intact / Rayures invisibles</option>
-                  <option>Micro-rayures</option>
-                  <option>Écran cassé / fissuré</option>
-               </select>
-               <select className={styles.input}>
-                  <option>État général (Dos / Contour)</option>
-                  <option>Comme neuf</option>
-                  <option>Usure normale</option>
-                  <option>Vitre arrière cassée / Châssis tordu</option>
-               </select>
-               <button type="button" className="btn-primary" style={{background: '#fff', color: '#2563eb'}}>Demander le prix</button>
-            </form>
+            <div style={{ marginTop: '2rem', background: '#fff', borderRadius: '20px', overflow: 'hidden' }}>
+              <iframe 
+                id="JotFormIFrame-261856530901356" 
+                title="Formulaire Devis Réparation" 
+                allowTransparency="true" 
+                allowFullScreen="true" 
+                allow="geolocation; microphone; camera" 
+                src="https://form.jotform.com/261856530901356" 
+                frameBorder="0" 
+                style={{ minWidth: '100%', maxWidth: '100%', height: '600px', border: 'none', display: 'block' }} 
+                scrolling="yes"
+              ></iframe>
+            </div>
          </div>
       </section>
+
+      <FAQ 
+        title="FAQ - Reprise et Rachat"
+        subtitle="Tout savoir sur la revente de votre téléphone."
+        customFaqs={[
+          { question: "Comment est calculé le prix de rachat de mon iPhone ou Samsung ?", answer: "L'estimation de reprise prend en compte la marque, le modèle, l'année de sortie, la capacité de stockage et l'état général de votre smartphone (écran intact, usure du châssis, batterie). Notre argus est indexé sur le marché de l'occasion en temps réel." },
+          { question: "Faut-il apporter les accessoires d'origine ?", answer: "Ce n'est pas obligatoire, mais fournir la boîte d'origine et le chargeur original peut légèrement augmenter la valeur de rachat de votre appareil." },
+          { question: "Rachetez-vous les téléphones bloqués iCloud ou Google ?", answer: "Non. Pour des raisons légales et de traçabilité, nous ne rachetons que des appareils dont vous êtes le propriétaire légitime et qui sont débloqués de tout compte iCloud, Google ou opérateur." },
+          { question: "Comment suis-je payé lors de la revente de mon smartphone ?", answer: "Le paiement est immédiat après le test technique en boutique. Nous proposons un règlement en espèces (dans le respect des limites légales) ou par virement bancaire instantané et sécurisé." }
+        ]}
+      />
 
     </div>
   );

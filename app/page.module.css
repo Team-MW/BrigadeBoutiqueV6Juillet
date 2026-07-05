@@ -621,3 +621,83 @@
     padding: 1.5rem;
   }
 }
+
+/* Notre Boutique Section */
+.boutiqueSection {
+  padding: 6rem 0;
+  background-color: #f8fafc;
+}
+
+.boutiqueHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.boutiqueTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.boutiqueDesc {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.boutiqueGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+}
+
+.boutiqueInfo {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.boutiqueInfo h3 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--secondary);
+  margin-bottom: 1.5rem;
+}
+
+.boutiqueInfo p {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+.mapBtn {
+  margin-top: 1.5rem;
+  align-self: flex-start;
+}
+
+.mapContainer {
+  width: 100%;
+  min-height: 400px;
+}
+
+@media (max-width: 992px) {
+  .boutiqueGrid {
+    grid-template-columns: 1fr;
+  }
+  .boutiqueInfo {
+    padding: 2.5rem;
+  }
+  .mapContainer {
+    height: 350px;
+  }
+}

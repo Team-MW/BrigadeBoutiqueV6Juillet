@@ -172,3 +172,24 @@ ul {
   box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2); /* Bleu clair (primary) */
   background-color: #FFFFFF;
 }
+
+/* Badges Tisseo */
+.bus-badge {
+  color: white;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-family: Arial, sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+  font-size: 0.9em;
+  margin-right: 4px;
+}
+.bus-l1 {
+  background-color: #F37021;
+}
+.bus-70 {
+  background-color: #EA488C;
+}

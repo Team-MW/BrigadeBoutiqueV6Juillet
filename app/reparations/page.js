@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Search, PenTool, ArrowRight } from 'lucide-react';
+import FAQ from '@/components/FAQ';
 import styles from './page.module.css';
 
 const brandsAndModels = [
@@ -221,6 +222,17 @@ export default function Reparations() {
           </div>
         </div>
       </section>
+
+      <FAQ 
+        title="FAQ - Réparation de Téléphones"
+        subtitle="Vos questions fréquentes sur nos services de réparation."
+        customFaqs={[
+          { question: "Combien coûte la réparation d'un écran de smartphone ?", answer: "Le prix dépend du modèle exact et de la marque (Apple, Samsung, Xiaomi...). Un devis gratuit est réalisé avant chaque intervention pour garantir une totale transparence." },
+          { question: "La réparation de mon téléphone est-elle garantie ?", answer: "Oui, toutes nos réparations (changement d'écran, batterie, connecteur de charge) sont garanties 1 an pièces et main d'œuvre." },
+          { question: "Dois-je prendre rendez-vous pour réparer mon appareil ?", answer: "Nous vous conseillons de prendre rendez-vous via notre formulaire ou par téléphone pour garantir la disponibilité de la pièce de rechange et vous assurer une réparation ultra rapide en 30 minutes." },
+          { question: "Est-ce que je vais perdre mes photos et données ?", answer: "Dans 99% des réparations matérielles classiques, vos données sont conservées. Toutefois, nous vous recommandons toujours d'effectuer une sauvegarde complète avant l'intervention par précaution." }
+        ]}
+      />
 
     </div>
   );

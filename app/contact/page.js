@@ -98,8 +98,8 @@ export default function Contact() {
                 <Clock className={styles.icon} size={24} />
                 <div>
                   <strong>Horaires</strong>
-                  <p>Lundi - Vendredi: 9h - 19h</p>
-                  <p>Samedi: 10h - 18h</p>
+                  <p>Lundi - Vendredi: 11h - 19h</p>
+                  <p>Samedi: 13h - 19h</p>
                   <p>Dimanche: Fermé</p>
                 </div>
               </div>

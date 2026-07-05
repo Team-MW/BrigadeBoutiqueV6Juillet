@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Wrench, Battery, Droplet, MonitorSmartphone, ShieldCheck, Zap, ThumbsUp, EyeOff } from "lucide-react";
 import WaveDivider from "@/components/WaveDivider";
+import FAQ from '@/components/FAQ';
 import styles from "./page.module.css";
 
 const GoogleStar = ({ size = 20 }) => (
@@ -262,6 +263,48 @@ export default function Home() {
                 <p className={styles.reviewText}>"{review.text}"</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <FAQ />
+
+      {/* Notre Boutique Section */}
+      <section className={styles.boutiqueSection}>
+        <div className="container">
+          <div className={styles.boutiqueHeader}>
+            <h2 className={styles.boutiqueTitle}>Notre Boutique</h2>
+            <p className={styles.boutiqueDesc}>
+              Venez nous rendre visite dans notre atelier toulousain ! Notre équipe vous y accueille avec le sourire pour diagnostiquer et réparer vos appareils au plus vite.
+            </p>
+          </div>
+          
+          <div className={styles.boutiqueGrid}>
+            <div className={styles.boutiqueInfo}>
+              <h3>La Brigade Mobile</h3>
+              <p>📍 65 Route de Blagnac<br/>31300 Toulouse</p>
+              <p>Ligne <span className="bus-badge bus-l1">L1</span> <span className="bus-badge bus-70">70</span> - Arrêt "Cité Madrid"</p>
+              <a 
+                href="https://maps.google.com/?q=65+Route+de+Blagnac,+31300+Toulouse" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={`btn-primary ${styles.mapBtn}`}
+              >
+                Itinéraire vers la boutique
+              </a>
+            </div>
+            
+            <div className={styles.mapContainer}>
+              <iframe 
+                src="https://maps.google.com/maps?q=65%20Route%20de%20Blagnac,%2031300%20Toulouse&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen="" 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </div>
         </div>
       </section>
