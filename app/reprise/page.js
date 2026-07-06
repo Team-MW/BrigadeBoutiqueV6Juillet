@@ -87,8 +87,8 @@ export default function Reprise() {
                 allow="geolocation; microphone; camera" 
                 src="https://form.jotform.com/261856530901356" 
                 frameBorder="0" 
-                style={{ minWidth: '100%', maxWidth: '100%', height: '600px', border: 'none', display: 'block' }} 
-                scrolling="yes"
+                style={{ minWidth: '100%', maxWidth: '100%', height: '1100px', border: 'none', display: 'block' }} 
+                scrolling="no"
               ></iframe>
             </div>
          </div>

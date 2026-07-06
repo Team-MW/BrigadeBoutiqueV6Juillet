@@ -99,6 +99,9 @@ export default function Footer() {
             <Link href="/politique-confidentialite" className={styles.navLink}>Politique de Confidentialité</Link>
           </div>
           <p>&copy; {new Date().getFullYear()} La Brigade Mobile. Tous droits réservés.</p>
+          <p style={{ fontSize: '0.9rem', marginTop: '-0.5rem' }}>
+            Réalisée par <a href="https://microdidact.com/" target="_blank" rel="noopener noreferrer" className={styles.navLink} style={{ textDecoration: 'underline' }}>microdidact</a>
+          </p>
         </div>
       </div>
     </footer>

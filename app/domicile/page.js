@@ -3,61 +3,115 @@ export const metadata = {
   description: 'Pas le temps de vous déplacer ? On répare votre téléphone à domicile ou au bureau sur Toulouse. Rapide, fiable et garanti 1 an. Prenez rendez-vous !',
 };
 
-import { Car, Clock, MapPin, Wrench } from 'lucide-react';
+import { Car, Clock, MapPin, Wrench, Star, ShieldCheck, Zap } from 'lucide-react';
 import FAQ from '@/components/FAQ';
 import styles from './page.module.css';
 
 export default function Domicile() {
   return (
-    <div className={styles.page}>
+    <div className={`${styles.page} ${styles.pageLight}`}>
       
+      {/* Background Animated Orbs */}
+      <div className={styles.orbYellow}></div>
+      <div className={styles.orbBlue}></div>
+      <div className={styles.orbPurple}></div>
+
       {/* Hero Section */}
       <section className={styles.heroSection}>
-        <div className={styles.giantWaveTop}></div>
-        
         <div className={`container ${styles.contentContainer}`}>
+          
+          <div className={styles.heroVisual}>
+            <div className={styles.compositionWrapper}>
+              
+              <div className={styles.mainCard}>
+                <div className={styles.iconWrapperMain}>
+                  <Car size={56} color="#2563eb" strokeWidth={2} />
+                </div>
+                <h2 className={styles.mainCardTitle}>L'Atelier Mobile</h2>
+                <p className={styles.mainCardText}>Nos véhicules sont équipés comme de vrais laboratoires de réparation de précision.</p>
+                <div className={styles.pulseContainer}>
+                  <div className={styles.pulseDot}></div>
+                  <span>En intervention</span>
+                </div>
+              </div>
+
+              {/* Floating Badge 1 */}
+              <div className={`${styles.floatingBadge} ${styles.badgeTopLeft}`}>
+                <Star size={20} color="#FBBC04" fill="#FBBC04" />
+                <span className={styles.badgeText}>4.9/5 Avis</span>
+              </div>
+
+              {/* Floating Badge 2 */}
+              <div className={`${styles.floatingBadge} ${styles.badgeBottomRight}`}>
+                <Zap size={20} color="#2563eb" />
+                <span className={styles.badgeText}>Intervention -30 min</span>
+              </div>
+
+              <div className={styles.glowBackdrop}></div>
+            </div>
+          </div>
+
           <div className={styles.textRight}>
-            <h1 className={styles.title}>La réparation vient <span className="text-gradient">à vous</span>.</h1>
+            <h1 className={styles.title}>La réparation vient <span className={styles.textGradient}>à vous.</span></h1>
             <p className={styles.subtitle}>
-              Pas le temps de vous déplacer en boutique ? Nos techniciens interviennent directement à votre domicile ou sur votre lieu de travail pour réparer votre téléphone.
+              Pas le temps de vous déplacer en boutique ? Nos experts interviennent directement à votre domicile ou sur votre lieu de travail avec un camion-atelier hyper équipé.
             </p>
-            <a href="#rendezvous" className="btn-primary">Prendre Rendez-vous</a>
+            <div className={styles.actionGroup}>
+              <a href="#rendezvous" className={styles.primaryBtnNeon}>Réserver un créneau</a>
+              <a href="#comment" className={styles.secondaryBtn}>Comment ça marche ?</a>
+            </div>
           </div>
           
-          <div className={styles.carBubble}>
-            <Car size={80} color="#fff" />
-            <h2>Intervention Rapide</h2>
-          </div>
         </div>
       </section>
 
       {/* SEO Section */}
-      <section className={styles.seoSection}>
+      <section id="comment" className={styles.seoSection}>
         <div className="container" style={{position: 'relative', zIndex: 2}}>
-          <h2 className="section-title">Comment ça marche ?</h2>
+          <h2 className={styles.sectionTitleNeon}>Comment ça marche ?</h2>
           
-          <div className={styles.stepsGrid}>
-             <div className={styles.stepCard}>
-                <div className={styles.stepNumber}>1</div>
-                <MapPin size={40} className={styles.icon} />
-                <h3>Prise de contact</h3>
-                <p>Indiquez-nous votre adresse, le modèle de votre appareil et la panne rencontrée. Nous vous donnons un devis immédiat.</p>
+          <div className={styles.bentoGrid}>
+             
+             {/* Big Bento Tile */}
+             <div className={`${styles.bentoCard} ${styles.bentoLarge}`}>
+                <div className={styles.bentoVisual}>
+                  <MapPin size={48} className={styles.iconBlue} />
+                  <div className={styles.radarEffect}></div>
+                </div>
+                <div className={styles.bentoContent}>
+                  <div className={styles.stepNumberInline}>Étape 1</div>
+                  <h3>Prise de contact & Devis</h3>
+                  <p>Indiquez-nous votre adresse, le modèle de votre appareil et la panne rencontrée. Nous vous donnons un devis immédiat et transparent sans frais cachés.</p>
+                </div>
              </div>
-             <div className={styles.stepCard}>
-                <div className={styles.stepNumber}>2</div>
-                <Clock size={40} className={styles.icon} />
-                <h3>Rendez-vous</h3>
-                <p>Nous fixons un créneau qui vous arrange. Le technicien se déplace avec les pièces nécessaires à l'intervention.</p>
+             
+             {/* Medium Bento Tile */}
+             <div className={`${styles.bentoCard} ${styles.bentoMedium}`}>
+                <div className={styles.bentoVisualSmall}>
+                  <Clock size={32} className={styles.iconBlue} />
+                </div>
+                <div className={styles.bentoContent}>
+                  <div className={styles.stepNumberInline}>Étape 2</div>
+                  <h3>Le Rendez-vous</h3>
+                  <p>Nous fixons un créneau. Notre technicien se déplace à votre domicile ou bureau avec tout l'équipement requis pour l'intervention.</p>
+                </div>
              </div>
-             <div className={styles.stepCard}>
-                <div className={styles.stepNumber}>3</div>
-                <Wrench size={40} className={styles.icon} />
-                <h3>Réparation sur place</h3>
-                <p>La majorité des réparations (écran, batterie) sont effectuées en moins de 30 minutes, sous vos yeux.</p>
+
+             {/* Small Bento Tile */}
+             <div className={`${styles.bentoCard} ${styles.bentoMedium}`}>
+                <div className={styles.bentoVisualSmall}>
+                  <Wrench size={32} className={styles.iconBlue} />
+                </div>
+                <div className={styles.bentoContent}>
+                  <div className={styles.stepNumberInline}>Étape 3</div>
+                  <h3>Réparation sur place</h3>
+                  <p>Votre écran ou batterie est remplacé(e) en 30 minutes, devant vous. L'appareil est testé avant le paiement.</p>
+                </div>
              </div>
+
           </div>
 
-          <div className={styles.seoText}>
+          <div className={styles.seoTextGlass}>
             <h3>Réparation iPhone à domicile et au bureau</h3>
             <p>
               Votre temps est précieux. C'est pourquoi La Brigade Mobile propose un service de réparation d'iPhone directement à domicile. Que vous habitiez en centre-ville ou en banlieue, nos techniciens certifiés se déplacent pour effectuer le changement d'écran de votre iPhone 14, ou remplacer la batterie de votre iPhone 12 Pro. Plus besoin de patienter des heures en magasin, le service est rapide, sécurisé et garanti 1 an.
@@ -84,8 +138,8 @@ export default function Domicile() {
                 allow="geolocation; microphone; camera" 
                 src="https://form.jotform.com/261856530901356" 
                 frameBorder="0" 
-                style={{ minWidth: '100%', maxWidth: '100%', height: '600px', border: 'none', display: 'block' }} 
-                scrolling="yes"
+                style={{ minWidth: '100%', maxWidth: '100%', height: '1100px', border: 'none', display: 'block' }} 
+                scrolling="no"
               ></iframe>
             </div>
          </div>

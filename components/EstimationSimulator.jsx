@@ -1,14 +1,16 @@
 'use client';
 
 import { useState } from 'react';
-import { Smartphone, Battery, MonitorX, PowerOff, CheckCircle2, ArrowRight, ChevronLeft } from 'lucide-react';
+import Image from 'next/image';
+import { Smartphone, Battery, MonitorX, PowerOff, CheckCircle2, ArrowRight, ChevronLeft, Search } from 'lucide-react';
+import { SiXiaomi } from 'react-icons/si';
 import styles from './EstimationSimulator.module.css';
 
 const BRANDS = [
-  { id: 'apple', name: 'Apple', logo: '🍏' },
-  { id: 'samsung', name: 'Samsung', logo: '📱' },
-  { id: 'xiaomi', name: 'Xiaomi', logo: '⚡' },
-  { id: 'other', name: 'Autre', logo: '🔍' }
+  { id: 'apple', name: 'Apple', logo: <Image src="/brands/apple.png" alt="Apple" width={40} height={40} style={{ objectFit: 'contain' }} /> },
+  { id: 'samsung', name: 'Samsung', logo: <Image src="/brands/samsung.png" alt="Samsung" width={70} height={40} style={{ objectFit: 'contain' }} /> },
+  { id: 'xiaomi', name: 'Xiaomi', logo: <SiXiaomi size={40} color="#FF6900" /> },
+  { id: 'other', name: 'Autre', logo: <Search size={40} color="#94a3b8" /> }
 ];
 
 const MODELS = {

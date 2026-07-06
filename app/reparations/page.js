@@ -1,9 +1,31 @@
 "use client";
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { Search, PenTool, ArrowRight } from 'lucide-react';
+import { FaApple, FaGoogle, FaTabletAlt, FaLaptop } from 'react-icons/fa';
+import { SiSamsung, SiHuawei, SiXiaomi, SiOppo, SiHonor, SiOneplus, SiAsus, SiMotorola, SiSony } from 'react-icons/si';
 import FAQ from '@/components/FAQ';
 import styles from './page.module.css';
+
+const BrandIcon = ({ brand, size = 20 }) => {
+  switch (brand) {
+    case 'Apple': return <Image src="/brands/apple.png" alt="Apple" width={size} height={size} style={{ objectFit: 'contain' }} />;
+    case 'Samsung': return <Image src="/brands/samsung.png" alt="Samsung" width={size * 2.5} height={size} style={{ objectFit: 'contain' }} />;
+    case 'Huawei': return <Image src="/brands/huawei.png" alt="Huawei" width={size} height={size} style={{ objectFit: 'contain' }} />;
+    case 'Tablettes': return <FaTabletAlt size={size} />;
+    case 'Ordinateurs': return <FaLaptop size={size} />;
+    case 'Xiaomi': return <SiXiaomi size={size} />;
+    case 'Google': return <FaGoogle size={size} />;
+    case 'Oppo': return <SiOppo size={size} />;
+    case 'Honor': return <SiHonor size={size} />;
+    case 'OnePlus': return <SiOneplus size={size} />;
+    case 'Asus': return <SiAsus size={size} />;
+    case 'Motorola': return <SiMotorola size={size} />;
+    case 'Sony': return <SiSony size={size} />;
+    default: return null;
+  }
+};
 
 const brandsAndModels = [
   { brand: 'Apple', models: [
@@ -162,7 +184,10 @@ export default function Reparations() {
                 filteredDevices.map((device, idx) => (
                   <div key={idx} className={styles.repairCard}>
                      <div className={styles.repairHeader}>
-                        <span className={styles.brandTag}>{device.brand}</span>
+                        <span className={styles.brandTag}>
+                          <BrandIcon brand={device.brand} size={16} />
+                          {device.brand}
+                        </span>
                         <PenTool size={20} className={styles.cardIcon} />
                      </div>
                      <h3 className={styles.repairModel}>{device.model}</h3>
