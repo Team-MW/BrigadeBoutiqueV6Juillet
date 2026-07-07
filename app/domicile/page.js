@@ -124,26 +124,6 @@ export default function Domicile() {
         </div>
       </section>
       
-      {/* Contact Bubble */}
-      <section id="rendezvous" className={styles.contactSection}>
-         <div className={styles.contactBubble}>
-            <h2>Réservez votre technicien</h2>
-            <p>Indiquez-nous vos disponibilités et votre ville pour que nous puissions organiser le déplacement.</p>
-            <div style={{ marginTop: '2rem', background: '#fff', borderRadius: '20px', overflow: 'hidden' }}>
-              <iframe 
-                id="JotFormIFrame-261856530901356" 
-                title="Formulaire Devis Réparation" 
-                allowtransparency="true" 
-                allowFullScreen="true" 
-                allow="geolocation; microphone; camera" 
-                src="https://form.jotform.com/261856530901356" 
-                frameBorder="0" 
-                style={{ minWidth: '100%', maxWidth: '100%', height: '1100px', border: 'none', display: 'block' }} 
-                scrolling="no"
-              ></iframe>
-            </div>
-         </div>
-      </section>
 
       <FAQ 
         title="FAQ - Réparation à Domicile"

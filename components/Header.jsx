@@ -49,7 +49,7 @@ export default function Header() {
           <Link href="/reparations" className={styles.navLink}>Réparations</Link>
           <Link href="/reprise" className={styles.navLink}>Reprise</Link>
           <Link href="/domicile" className={styles.navLink}>À Domicile</Link>
-          <Link href="/contact" className="btn-primary">Devis Gratuit</Link>
+          <Link href="/contact#formulaire" className="btn-primary">Devis Gratuit</Link>
         </nav>
 
         {/* Bouton Burger Mobile */}
@@ -77,7 +77,7 @@ export default function Header() {
             <Link href="/reparations" className={styles.mobileNavLink} onClick={toggleMenu}>Réparations</Link>
             <Link href="/reprise" className={styles.mobileNavLink} onClick={toggleMenu}>Reprise</Link>
             <Link href="/domicile" className={styles.mobileNavLink} onClick={toggleMenu}>À Domicile</Link>
-            <Link href="/contact" className={`btn-primary ${styles.mobileBtn}`} onClick={toggleMenu}>Devis Gratuit</Link>
+            <Link href="/contact#formulaire" className={`btn-primary ${styles.mobileBtn}`} onClick={toggleMenu}>Devis Gratuit</Link>
           </nav>
         </div>
       )}

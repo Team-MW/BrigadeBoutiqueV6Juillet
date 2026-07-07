@@ -21,6 +21,7 @@ export default function Reprise() {
           <div className={styles.textLeft}>
             <h1 className={styles.title}>Revendez votre <span className="text-gradient">téléphone</span> au meilleur prix.</h1>
             <p className={styles.subtitle}>
+              <strong>Récupérez jusqu'à 600€ en revendant votre ancien téléphone !</strong><br/><br/>
               La Brigade Mobile rachète vos anciens smartphones, tablettes et ordinateurs. 
               Qu'ils soient fonctionnels ou cassés, donnez-leur une seconde vie et repartez avec du cash !
             </p>
@@ -73,26 +74,6 @@ export default function Reprise() {
         </div>
       </section>
       
-      {/* Formulaire de pré-estimation */}
-      <section id="estimer" className={styles.contactSection}>
-         <div className={styles.contactBubble}>
-            <h2>Demande d'estimation gratuite</h2>
-            <p>Remplissez ce formulaire pour avoir une idée du prix de rachat. La valeur finale sera validée lors du contrôle technique de l'appareil en boutique.</p>
-            <div style={{ marginTop: '2rem', background: '#fff', borderRadius: '20px', overflow: 'hidden' }}>
-              <iframe 
-                id="JotFormIFrame-261856530901356" 
-                title="Formulaire Devis Réparation" 
-                allowtransparency="true" 
-                allowFullScreen="true" 
-                allow="geolocation; microphone; camera" 
-                src="https://form.jotform.com/261856530901356" 
-                frameBorder="0" 
-                style={{ minWidth: '100%', maxWidth: '100%', height: '1100px', border: 'none', display: 'block' }} 
-                scrolling="no"
-              ></iframe>
-            </div>
-         </div>
-      </section>
 
       <FAQ 
         title="FAQ - Reprise et Rachat"

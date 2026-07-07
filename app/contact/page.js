@@ -73,8 +73,10 @@ export default function Contact() {
                 <MapPin className={styles.icon} size={24} />
                 <div>
                   <strong>Adresse</strong>
-                  <p>65 Rte de Blagnac</p>
-                  <p>31200 Toulouse</p>
+                  <a href="https://maps.google.com/?q=65+Route+de+Blagnac,+31200+Toulouse" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
+                    <p>65 Rte de Blagnac</p>
+                    <p>31200 Toulouse</p>
+                  </a>
                 </div>
               </div>
               
@@ -82,7 +84,9 @@ export default function Contact() {
                 <Phone className={styles.icon} size={24} />
                 <div>
                   <strong>Téléphone</strong>
-                  <p>01 23 45 67 89</p>
+                  <a href="tel:0756916593" style={{ color: 'inherit', textDecoration: 'none' }}>
+                    <p>07 56 91 65 93</p>
+                  </a>
                 </div>
               </div>
               
@@ -90,7 +94,9 @@ export default function Contact() {
                 <Mail className={styles.icon} size={24} />
                 <div>
                   <strong>Email</strong>
-                  <p>contact@labrigademobile.fr</p>
+                  <a href="mailto:labrigademobile31@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>
+                    <p>labrigademobile31@gmail.com</p>
+                  </a>
                 </div>
               </div>
 
@@ -123,7 +129,7 @@ export default function Contact() {
           </div>
 
           {/* Formulaire de Devis Jotform avec Loading */}
-          <div className={styles.formSection}>
+          <div className={styles.formSection} id="formulaire">
             <div style={{ position: 'relative', width: '100%', minHeight: '600px', background: '#FFFFFF', borderRadius: '40px', boxShadow: '0 20px 50px rgba(37,99,235,0.06)' }}>
               
               {/* Écran de chargement */}
