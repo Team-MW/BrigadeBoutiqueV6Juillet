@@ -8,7 +8,7 @@ export default function BackgroundShapes() {
       <div className={`${styles.shape} ${styles.shape3}`}></div>
       <div className={`${styles.shape} ${styles.shape4}`}></div>
 
-      {/* Overlaydede pour donner de la texture (optionnel, effet noise) */}
+      {/* Overlaydede pour donner de lafrefre texture (optionnel, effet noise) */}
       <div className={styles.noiseOverlay}></div>
     </div>
   );
