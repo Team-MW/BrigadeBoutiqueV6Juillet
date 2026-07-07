@@ -155,6 +155,10 @@
 }
 
 /* Form Section */
+.formSection {
+  scroll-margin-top: 100px;
+}
+
 .formCard {
   height: 100%;
 }
