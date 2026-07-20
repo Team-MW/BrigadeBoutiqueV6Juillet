@@ -15,6 +15,12 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/domicile`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/reprise`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
@@ -25,6 +31,18 @@ export default function sitemap() {
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/mentions-legales`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/politique-confidentialite`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.5,
     },
   ];
 }
