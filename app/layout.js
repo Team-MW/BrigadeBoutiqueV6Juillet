@@ -13,15 +13,6 @@ export const metadata = {
     template: '%s | La Brigade Mobile'
   },
   description: "Réparation express de téléphones à Toulouse et à domicile. iPhone, Samsung, Xiaomi... Écran, batterie. Pièces Premium garanties 1 an. Devis gratuit !",
-  icons: {
-    icon: '/logo.png',
-    shortcut: '/logo.png',
-    apple: '/logo.png',
-    other: {
-      rel: 'apple-touch-icon-precomposed',
-      url: '/logo.png',
-    },
-  },
   openGraph: {
     title: 'La Brigade Mobile | Réparation de Téléphones à Toulouse',
     description: 'Réparation express de smartphones à Toulouse et à domicile. Intervention en 30 min, pièces premium garanties 1 an. Contactez-nous !',
